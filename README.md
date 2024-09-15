@@ -15,4 +15,7 @@
 
 - To do the convergence study for Trapezoidal Rule and Monte-Carlo Method, compile **convergence_study.C** code by `g++ -O3 -fopenmp -o convergence_study.o convergence_study.C -lm`. Execute the code `time ./convergence_study.o`.
 
+<p style="text-align:center;">(OR)</p>
+
+- To do the convergence study for Trapezoidal Rule and Monte-Carlo Method, compile and execute `g++ -O3 -fopenmp -o convergence_study.o convergence_study.C -lm && ./convergence_study.o > convergence_data.csv && python3 convergence_plot.py` to view the convergence plot from python.
 ---

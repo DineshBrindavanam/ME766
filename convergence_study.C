@@ -4,7 +4,7 @@
 #include <time.h>
 #include <omp.h>
 
-#define PI 3.14159
+#define PI 3.14159265358979323846
 #define ANALYTICAL_RESULT 2.0
 
 double f(double x) {
@@ -36,8 +36,7 @@ double monte_carlo(double a, double b, int n) {
 }
 
 void convergence_study(double a, double b, int max_iterations) {
-    printf("Convergence Study:\n");
-    printf("N\tTrapezoidal Error\tMonte Carlo Error\n");
+    printf("N,Trapezoidal_Error,Monte_Carlo_Error\n");
 
     for (int i = 1; i <= max_iterations; i++) {
         int n = pow(2, i) * 1000;  // Increase number of points exponentially
@@ -48,7 +47,7 @@ void convergence_study(double a, double b, int max_iterations) {
         double trap_error = fabs(trap_result - ANALYTICAL_RESULT);
         double mc_error = fabs(mc_result - ANALYTICAL_RESULT);
         
-        printf("%d\t%.10e\t%.10e\n", n, trap_error, mc_error);
+        printf("%d,%.10e,%.10e\n", n, trap_error, mc_error);
     }
 }
 
