@@ -19,3 +19,9 @@
 
 - To do the convergence study for Trapezoidal Rule and Monte-Carlo Method, compile and execute `g++ -O3 -fopenmp -o convergence_study.o convergence_study.C -lm && ./convergence_study.o > convergence_data.csv && python3 convergence_plot.py` to view the convergence plot from python.
 ---
+
+## OpenMP timing study for Trapezoidal Rule and Monte-Carlo Method using 2, 4, 6 and 8 threads
+
+- To compute the OpenMP timing study between Trapezoidal rule and Monte-Carlo method using 2, 4, 6 and 8 threads for average 5 times execution by running `g++ -O3 -fopenmp -o OpenMP_timing_study.o OpenMP_timing_study.C -lm && ./OpenMP_timing_study.o`.
+
+---
