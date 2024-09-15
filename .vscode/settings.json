@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "trapezoidal_OpenMP.C": "cpp",
+        "monteCarlo_serial.C": "cpp",
+        "trapezoidal_serial.C": "cpp",
+        "monteCarlo_OpenMP.C": "cpp"
+    }
+}
