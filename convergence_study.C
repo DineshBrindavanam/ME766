@@ -4,7 +4,7 @@
 #include <time.h>
 #include <omp.h>
 
-#define PI 3.14159265358979323846
+#define PI 3.14159
 #define ANALYTICAL_RESULT 2.0
 
 double f(double x) {

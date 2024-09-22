@@ -33,3 +33,6 @@
 
 # Image files
 *.png
+
+# Data files
+*.csv
