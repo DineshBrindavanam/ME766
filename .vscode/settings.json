@@ -5,6 +5,8 @@
         "trapezoidal_serial.C": "cpp",
         "monteCarlo_OpenMP.C": "cpp",
         "convergence_study.C": "cpp",
-        "OpenMP_timing_study.C": "cpp"
+        "OpenMP_timing_study.C": "cpp",
+        "matrix_multiplication.C": "cpp",
+        "mpi_matrix_multiplication.C": "cpp"
     }
 }
