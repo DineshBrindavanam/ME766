@@ -33,6 +33,8 @@
 
 # Image files
 *.png
+!Assignment_4/Assignment_2_mpi_matrix_multiplication.png
+!Assignment_4/Assignment_3_cuda_matrix_multiplication.png
 
 # Data files
 *.csv

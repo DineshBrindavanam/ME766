@@ -3,7 +3,7 @@
 #include <chrono>
 
 // CUDA kernel for matrix multiplication
-__global__ void matrixMultiply(float* A, float* B, float* C, int N) {
+__global__ void matrixMultiplication(float* A, float* B, float* C, int N) {
     int row = blockIdx.y * blockDim.y + threadIdx.y;
     int col = blockIdx.x * blockDim.x + threadIdx.x;
 
@@ -17,7 +17,7 @@ __global__ void matrixMultiply(float* A, float* B, float* C, int N) {
 }
 
 // Helper function to initialize matrix with random values
-void initializeMatrix(float* matrix, int N) {
+void matrixInitialize(float* matrix, int N) {
     for (int i = 0; i < N * N; ++i) {
         matrix[i] = static_cast<float>(rand()) / RAND_MAX;
     }
@@ -34,8 +34,8 @@ int main() {
         h_C = (float*)malloc(size);
 
         // Initialize matrices A and B
-        initializeMatrix(h_A, N);
-        initializeMatrix(h_B, N);
+        matrixInitialize(h_A, N);
+        matrixInitialize(h_B, N);
 
         // Allocate memory on device
         float *d_A, *d_B, *d_C;
@@ -56,7 +56,7 @@ int main() {
         auto start = std::chrono::high_resolution_clock::now();
 
         // Launch kernel
-        matrixMultiply<<<blocksPerGrid, threadsPerBlock>>>(d_A, d_B, d_C, N);
+        matrixMultiplication<<<blocksPerGrid, threadsPerBlock>>>(d_A, d_B, d_C, N);
         cudaDeviceSynchronize();
 
         auto end = std::chrono::high_resolution_clock::now();
